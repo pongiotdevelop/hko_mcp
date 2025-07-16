@@ -18,7 +18,8 @@ This project utilizes the official HKO Open Data API:
 - [HKO Open Data API Documentation](https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf)
 
 ## Prerequisites
-- Python 3.10 or higher
+- Python 3.13 or higher
+- [uv](https://github.com/astral-sh/uv) (recommended) or pip
 
 ## Installation
 1. Install Python
@@ -34,9 +35,12 @@ git clone https://github.com/pongiotdevelop/hko_mcp.git
 {
     "mcpServers": {
         "HKO_MCP": {
-            "command": "python",
+            "command": "uv",
             "args": [
+                "--directory",
                 "<directory of the project>"
+                "run",
+                "main.py"
             ]
         }    
     }
